@@ -14,9 +14,13 @@ python -m http.server 4173
 
 然后访问 `http://127.0.0.1:4173/`。
 
-## 公网分享
+## 在线地址
 
-当前公网预览使用 Cloudflare Quick Tunnel 发布：地址每次重启后可能变化，并且需要本机保持开机、本地服务与隧道进程持续运行。若需要长期固定网址，建议把本文件夹拖入 Netlify Drop，或部署到 GitHub Pages。
+GitHub Pages 永久地址：
+
+https://91ctj.github.io/dengshenjie/
+
+网站为纯静态页面，不依赖本机运行；更新 GitHub 仓库后会自动重新发布。
 
 ## 页面结构
 
