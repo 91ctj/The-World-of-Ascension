@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07090d">
+  <meta name="description" content="《登神阶》世界观介绍站：元力、魂环、神位与万年史诗。从龙陨纪元到神佑纪元，走进一个关于信仰、血脉与成神的故事。">
+  <meta property="og:title" content="登神阶 · 世界观档案">
+  <meta property="og:description" content="元力为海，魂环为阶。从龙陨的灰烬，到神座的黎明。">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <title>登神阶 · 世界观档案</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2307090d'/%3E%3Cpath d='M32 8 54 20v24L32 56 10 44V20L32 8Z' fill='none' stroke='%23c8a86b' stroke-width='2'/%3E%3Cpath d='M32 20 44 27v14l-12 7-12-7V27l12-7Z' fill='none' stroke='%23e7d3a7' stroke-width='1.5'/%3E%3Cpath d='M32 28v12M26 34h12' stroke='%23e7d3a7' stroke-width='1.5'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="i-orbit" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <ellipse cx="12" cy="12" rx="10" ry="4.4" fill="none" stroke="currentColor" stroke-width="1.2" transform="rotate(-28 12 12)"/>
+      <circle cx="20.2" cy="7.8" r="1.3" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-wave" viewBox="0 0 24 24">
+      <path d="M2 9c3.2 0 3.2-3 6.4-3s3.2 3 6.4 3 3.2-3 6.4-3M2 15c3.2 0 3.2-3 6.4-3s3.2 3 6.4 3 3.2-3 6.4-3" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-soul" viewBox="0 0 24 24">
+      <path d="M12 2.8c2.2 2.4 5.6 4.1 5.6 8.5 0 4.1-2.7 6.8-5.6 9.9-2.9-3.1-5.6-5.8-5.6-9.9 0-4.4 3.4-6.1 5.6-8.5Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M12 7.2v7.2M9.4 11.2 12 14l2.6-2.8" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-vessel" viewBox="0 0 24 24">
+      <path d="M12 2.8c3.2 3.2 5 5.9 5 9.1a5 5 0 0 1-10 0c0-3.2 1.8-5.9 5-9.1Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M9.2 12.2h5.6M12 9.4v5.6" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-ring" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="7.2" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="1.8 2.4"/>
+      <path d="M12 2.8v2.4M12 18.8v2.4M2.8 12h2.4M18.8 12h2.4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-core" viewBox="0 0 24 24">
+      <path d="m12 2.8 7.2 4.1v10.2L12 21.2l-7.2-4.1V6.9L12 2.8Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <path d="m12 7 3.4 2v4L12 15l-3.4-2V9L12 7Z" fill="none" stroke="currentColor" stroke-width="1.1"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <path d="m5 5 14 14M19 5 5 19" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24">
+      <path d="M3 7h18M3 12h18M3 17h18" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-seal" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="26" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <circle cx="32" cy="32" r="20" fill="none" stroke="currentColor" stroke-width=".8" stroke-dasharray="2 4"/>
+      <path d="M32 16v32M16 32h32M21 21l22 22M43 21 21 43" stroke="currentColor" stroke-width=".7" opacity=".55"/>
+      <circle cx="32" cy="32" r="8" fill="none" stroke="currentColor" stroke-width="1.2"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header" id="siteHeader">
+    <div class="nav-inner">
+      <a class="brand" href="#home" aria-label="登神阶首页">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M16 2 28 9v14L16 30 4 23V9L16 2Z" fill="none" stroke="currentColor" stroke-width="1"/><path d="M16 8 22 12v8l-6 4-6-4v-8l6-4Z" fill="none" stroke="currentColor" stroke-width="1"/><path d="M16 13v6M13 16h6" stroke="currentColor" stroke-width="1"/></svg>
+        </span>
+        <span class="brand-text">登神阶<small>WORLD ARCHIVE</small></span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="主导航">
+        <a href="#world" data-nav="world">世界基石</a>
+        <a href="#power" data-nav="power">力量体系</a>
+        <a href="#chronicle" data-nav="chronicle">万年史诗</a>
+        <a href="#factions" data-nav="factions">势力版图</a>
+        <a href="#truth" data-nav="truth">光与影</a>
+        <a href="#characters" data-nav="characters">群像</a>
+        <a href="#story" data-nav="story">故事</a>
+      </nav>
+
+      <div class="nav-right">
+        <span class="spoiler-pill" title="本页包含《魔裔天使》结局剧透">含终章剧透</span>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="打开导航" aria-expanded="false" aria-controls="mainNav">
+          <svg><use href="#i-menu"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-art-wrap" aria-hidden="true">
+        <svg class="hero-art" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <radialGradient id="haloGrad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#e9d7ad" stop-opacity=".26"/>
+              <stop offset="34%" stop-color="#c8a86b" stop-opacity=".1"/>
+              <stop offset="100%" stop-color="#c8a86b" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="beamGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#f3e4c3" stop-opacity=".24"/>
+              <stop offset="45%" stop-color="#c8a86b" stop-opacity=".07"/>
+              <stop offset="100%" stop-color="#c8a86b" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="stepGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#c8a86b" stop-opacity=".02"/>
+              <stop offset="50%" stop-color="#e7d3a7" stop-opacity=".16"/>
+              <stop offset="100%" stop-color="#c8a86b" stop-opacity=".02"/>
+            </linearGradient>
+            <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+              <feGaussianBlur stdDeviation="16"/>
+            </filter>
+            <filter id="tinyGlow" x="-200%" y="-200%" width="500%" height="500%">
+              <feGaussianBlur stdDeviation="2.4"/>
+            </filter>
+          </defs>
+
+          <g class="hero-stars" fill="#e7d3a7">
+            <circle cx="145" cy="180" r="1.4" opacity=".45"/>
+            <circle cx="238" cy="96" r=".9" opacity=".32"/>
+            <circle cx="324" cy="248" r="1.1" opacity=".38"/>
+            <circle cx="418" cy="138" r="1.6" opacity=".42"/>
+            <circle cx="508" cy="82" r=".8" opacity=".28"/>
+            <circle cx="604" cy="178" r="1.2" opacity=".36"/>
+            <circle cx="710" cy="72" r="1" opacity=".4"/>
+            <circle cx="892" cy="120" r="1.4" opacity=".42"/>
+            <circle cx="1004" cy="68" r=".8" opacity=".3"/>
+            <circle cx="1112" cy="164" r="1.1" opacity=".35"/>
+            <circle cx="1208" cy="96" r="1.5" opacity=".4"/>
+            <circle cx="1324" cy="210" r=".9" opacity=".3"/>
+            <circle cx="1442" cy="128" r="1.2" opacity=".4"/>
+            <circle cx="1510" cy="286" r=".8" opacity=".28"/>
+            <circle cx="196" cy="356" r=".9" opacity=".3"/>
+            <circle cx="286" cy="462" r="1.3" opacity=".28"/>
+            <circle cx="1288" cy="398" r="1" opacity=".32"/>
+            <circle cx="1398" cy="486" r="1.4" opacity=".26"/>
+            <circle cx="1470" cy="612" r=".8" opacity=".25"/>
+            <circle cx="102" cy="602" r="1" opacity=".2"/>
+          </g>
+
+          <ellipse cx="800" cy="298" rx="470" ry="470" fill="url(#haloGrad)"/>
+          <ellipse cx="800" cy="298" rx="300" ry="300" fill="none" stroke="#d6bd8b" stroke-opacity=".1"/>
+          <ellipse cx="800" cy="298" rx="228" ry="228" fill="none" stroke="#d6bd8b" stroke-opacity=".13"/>
+          <ellipse cx="800" cy="298" rx="158" ry="158" fill="none" stroke="#d6bd8b" stroke-opacity=".16"/>
+
+          <g class="hero-arch" fill="none" stroke="#d6bd8b">
+            <path d="M604 590V370c0-110 86-190 196-190s196 80 196 190v220" stroke-opacity=".14" stroke-width="1.2"/>
+            <path d="M642 590V378c0-91 68-156 158-156s158 65 158 156v212" stroke-opacity=".18" stroke-width=".8"/>
+            <path d="M800 160v430M670 360h260" stroke-opacity=".08" stroke-width=".8"/>
+          </g>
+
+          <path d="M800 510 1220 960H380L800 510Z" fill="url(#beamGrad)" opacity=".65"/>
+
+          <g class="hero-stairs" fill="url(#stepGrad)" stroke="#d6bd8b" stroke-opacity=".15" stroke-width=".7">
+            <path d="M560 930h480l-6-8H566l-6 8Z"/>
+            <path d="M571 900h458l-6-8H577l-6 8Z"/>
+            <path d="M582 870h436l-6-8H588l-6 8Z"/>
+            <path d="M593 840h414l-6-8H599l-6 8Z"/>
+            <path d="M604 810h392l-6-8H610l-6 8Z"/>
+            <path d="M615 780h370l-6-8H621l-6 8Z"/>
+            <path d="M626 750h348l-6-8H632l-6 8Z"/>
+            <path d="M637 720h326l-6-8H643l-6 8Z"/>
+            <path d="M648 690h304l-6-8H654l-6 8Z"/>
+            <path d="M659 660h282l-6-8H665l-6 8Z"/>
+            <path d="M670 630h260l-6-8H676l-6 8Z"/>
+            <path d="M681 600h238l-6-8H687l-6 8Z"/>
+            <path d="M692 570h216l-6-8H698l-6 8Z"/>
+            <path d="M703 540h194l-6-8H709l-6 8Z"/>
+            <path d="M714 510h172l-6-8H720l-6 8Z"/>
+            <path d="M725 480h150l-6-8H731l-6 8Z"/>
+          </g>
+
+          <g class="hero-stair-sides" fill="none" stroke="#d6bd8b" stroke-opacity=".1">
+            <path d="M560 930 725 480M1040 930 875 480"/>
+            <path d="M566 922 731 472M1034 922 869 472" stroke-opacity=".05"/>
+          </g>
+
+          <g class="hero-wings" fill="none" stroke="#d6bd8b" stroke-linecap="round">
+            <path d="M596 420C470 340 388 386 330 528c96-56 166-38 266 18" stroke-opacity=".12"/>
+            <path d="M580 470C454 414 386 454 342 566c84-42 148-24 238 16" stroke-opacity=".09"/>
+            <path d="M1004 420c126-80 208-34 266 108-96-56-166-38-266 18" stroke-opacity=".12"/>
+            <path d="M1020 470c126-56 194-16 238 96-84-42-148-24-238 16" stroke-opacity=".09"/>
+          </g>
+
+          <g class="hero-figure">
+            <ellipse cx="800" cy="918" rx="66" ry="10" fill="#e7d3a7" opacity=".08" filter="url(#softGlow)"/>
+            <path d="M788 930c0-33 4-52 12-66 8 14 12 33 12 66Z" fill="#07090d"/>
+            <circle cx="800" cy="850" r="3.2" fill="#f0dfb9" opacity=".9" filter="url(#tinyGlow)"/>
+          </g>
+
+          <g class="hero-mist" fill="#c8a86b" filter="url(#softGlow)">
+            <ellipse cx="430" cy="720" rx="260" ry="70" opacity=".025"/>
+            <ellipse cx="1180" cy="760" rx="300" ry="86" opacity=".022"/>
+            <ellipse cx="800" cy="960" rx="500" ry="90" opacity=".03"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="hero-vignette" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow hero-eyebrow">ORIGINAL FANTASY WORLD <span>·</span> WORLD ARCHIVE 001</p>
+        <div class="hero-title-wrap">
+          <span class="hero-side-note">THE STAIRWAY<br>TO APOTHEOSIS</span>
+          <h1 class="hero-title">登神阶</h1>
+        </div>
+        <p class="hero-lead">元力为海，魂环为阶。<br>从龙陨的灰烬，到神座的黎明。</p>
+        <p class="hero-sub">一部横跨一万年的东方奇幻史诗。<br>关于信仰如何被建立，又如何被亲手埋葬。</p>
+
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#world">进入世界 <svg><use href="#i-arrow"></use></svg></a>
+          <a class="btn btn-ghost" href="#story">阅读终章</a>
+        </div>
+
+        <div class="hero-stats" aria-label="世界观数据">
+          <div class="hero-stat"><strong>12</strong><span>魂力属性</span></div>
+          <div class="hero-stat"><strong>9</strong><span>魂环境界</span></div>
+          <div class="hero-stat"><strong>10,000</strong><span>年天使纪元</span></div>
+          <div class="hero-stat"><strong>4</strong><span>大神位</span></div>
+        </div>
+      </div>
+
+      <div class="hero-bottom">
+        <div class="hero-era-line"><span>龙陨纪元</span><i></i><span>天使纪元</span><i></i><span>神佑纪元</span></div>
+        <a class="scroll-cue" href="#world" aria-label="向下滚动"><span>SCROLL</span><i></i></a>
+      </div>
+    </section>
+
+    <section class="section section-foundation" id="world">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span>01</span> / FOUNDATION</p>
+          <h2>万物皆有元力，<br><em>灵魂亦有回响。</em></h2>
+          <p class="section-lead">母星之上，元力是构成宇宙最基本的粒子之一。它能化作物质与能量，也能在生命体内凝聚成魂力。</p>
+        </header>
+
+        <div class="foundation-intro reveal">
+          <div class="foundation-copy">
+            <p>在生物进行信息集中处理的部位，元力的运动最为复杂。复杂到足以诞生自我意识的元力阵列，被称为<strong>灵魂</strong>。</p>
+            <p>魂兽天生拥有本源、经脉与识海，能将元力转化为魂力。人类本无此天赋，直到龙陨之后，<strong>大监护者</strong>改写了人类的生理。</p>
+          </div>
+          <blockquote class="pull-quote">
+            <span class="quote-mark">“</span>
+            <p>神只是不会因衰老而死，<br>并非不死不灭。</p>
+            <cite>《登神阶》世界观设定</cite>
+          </blockquote>
+        </div>
+
+        <div class="concept-grid">
+          <article class="concept-card reveal">
+            <div class="concept-icon"><svg><use href="#i-orbit"></use></svg></div>
+            <p class="card-kicker">PRIMAL FORCE</p>
+            <h3>元力</h3>
+            <p>构成宇宙的基本粒子，可转化为物质与能量。它不是魔法，而是世界的底层语法。</p>
+            <span class="card-index">01</span>
+          </article>
+          <article class="concept-card reveal">
+            <div class="concept-icon"><svg><use href="#i-wave"></use></svg></div>
+            <p class="card-kicker">SOUL POWER</p>
+            <h3>魂力</h3>
+            <p>生命体内被转化的元力。修炼、魂技、武魂真身与神技，皆以它为燃料。</p>
+            <span class="card-index">02</span>
+          </article>
+          <article class="concept-card reveal">
+            <div class="concept-icon"><svg><use href="#i-soul"></use></svg></div>
+            <p class="card-kicker">SOUL</p>
+            <h3>灵魂</h3>
+            <p>复杂到能自我思维的元力阵列。没有魂力维系，再高等的灵魂也会消散。</p>
+            <span class="card-index">03</span>
+          </article>
+          <article class="concept-card reveal">
+            <div class="concept-icon"><svg><use href="#i-vessel"></use></svg></div>
+            <p class="card-kicker">SOUL ORGAN</p>
+            <h3>魂器</h3>
+            <p>本源、经脉、识海。吸收、运输、蕴养，构成魂兽与魂师共同的生理基础。</p>
+            <span class="card-index">04</span>
+          </article>
+          <article class="concept-card reveal">
+            <div class="concept-icon"><svg><use href="#i-ring"></use></svg></div>
+            <p class="card-kicker">SOUL RING</p>
+            <h3>魂环</h3>
+            <p>魂兽死后遗留的魂力与血脉结晶。十年白、百年黄、千年紫、万年黑、十万年红。</p>
+            <span class="card-index">05</span>
+          </article>
+          <article class="concept-card reveal">
+            <div class="concept-icon"><svg><use href="#i-core"></use></svg></div>
+            <p class="card-kicker">SOUL CORE</p>
+            <h3>魂核</h3>
+            <p>魂兽的第二魂力核心。可融合、可刻录魂技，极少数还能让断肢再生。</p>
+            <span class="card-index">06</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-power" id="power">
+      <div class="container">
+        <header class="section-head section-head-split reveal">
+          <div>
+            <p class="eyebrow"><span>02</span> / ASCENSION</p>
+            <h2>九环为人，<br><em>百级为神。</em></h2>
+          </div>
+          <p class="section-lead">魂师的每一次突破，都是一次与死亡擦肩的仪式。魂环带来力量，也带来魂兽的意志。</p>
+        </header>
+
+        <div class="power-toolbar reveal">
+          <div class="segmented" role="tablist" aria-label="选择修炼体系">
+            <button type="button" class="segmented-btn is-active" id="tabMaster" role="tab" aria-selected="true" aria-controls="powerPanel" data-power-type="master">魂师 · 九环</button>
+            <button type="button" class="segmented-btn" id="tabBeast" role="tab" aria-selected="false" aria-controls="powerPanel" data-power-type="beast">魂兽 · 五境</button>
+          </div>
+          <div class="ring-legend" aria-label="魂环颜色图例">
+            <span><i class="dot white"></i>十年</span>
+            <span><i class="dot yellow"></i>百年</span>
+            <span><i class="dot purple"></i>千年</span>
+            <span><i class="dot black"></i>万年</span>
+            <span><i class="dot red"></i>十万年</span>
+          </div>
+        </div>
+
+        <div class="power-shell">
+          <div class="power-ladder reveal" id="powerLadder" aria-label="魂师境界列表"></div>
+
+          <div class="power-detail reveal" id="powerPanel" role="tabpanel" aria-live="polite">
+            <div class="power-detail-top">
+              <div class="ring-visual" id="ringVisual" aria-hidden="true">
+                <svg viewBox="0 0 260 260">
+                  <circle class="ring-track" cx="130" cy="130" r="104"></circle>
+                  <g class="ring-segments" id="ringSegments"></g>
+                  <circle class="ring-inner" cx="130" cy="130" r="76"></circle>
+                  <path class="ring-cross" d="M130 26v208M26 130h208"></path>
+                </svg>
+                <div class="ring-center">
+                  <span id="ringNumber">IX</span>
+                  <small id="ringUnit">RING</small>
+                </div>
+              </div>
+              <div class="power-detail-copy">
+                <p class="card-kicker" id="detailKicker">SOUL MASTER · NINTH RING</p>
+                <h3 id="detailTitle">九环 · 封号斗罗</h3>
+                <p id="detailDesc">封号斗罗。足以令十万年魂兽忌惮，是猎魂长老会与武魂殿的支柱。一个武魂最多承载九枚魂环，九环便是人类魂师的极限。</p>
+                <div class="tag-row" id="detailTags">
+                  <span>封号斗罗</span><span>武魂真身</span><span>人类巅峰</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="power-extra" id="powerExtra">
+              <div class="extra-card">
+                <span class="extra-num">95</span>
+                <div>
+                  <h4>凡人的枷锁</h4>
+                  <p>95级是大监护者为人类设下的上限。96级以上，只向它认可的人开放。</p>
+                </div>
+              </div>
+              <div class="extra-card">
+                <span class="extra-num">100</span>
+                <div>
+                  <h4>神之领域</h4>
+                  <p>武魂与魂环融入本源，凝聚神环。从此使用的不再是魂技，而是神技。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="divine-strip reveal">
+          <div class="divine-intro">
+            <p class="eyebrow">BEYOND THE NINTH</p>
+            <h3>九环之后，<br>才是神的门槛。</h3>
+          </div>
+          <div class="divine-levels">
+            <div class="divine-level">
+              <span>96–98</span>
+              <strong>神选</strong>
+              <small>圣徒 · 被神认可者</small>
+            </div>
+            <div class="divine-level">
+              <span>99</span>
+              <strong>半神</strong>
+              <small>大天使 · 神位继承者</small>
+            </div>
+            <div class="divine-level">
+              <span>100</span>
+              <strong>神</strong>
+              <small>神环 · 神技 · 永生</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="attributes reveal">
+          <div class="attributes-head">
+            <div>
+              <p class="eyebrow">TWELVE ELEMENTS</p>
+              <h3>十二属性，魂技的语法。</h3>
+            </div>
+            <p>龙族发明的十二种魂力属性，覆盖了从天气、地表到灵魂与时空的全部领域。每一种属性，都是一条通往神座的分支。</p>
+          </div>
+          <div class="attribute-grid">
+            <div class="attribute"><span>风</span><small>疾行 / 切割</small></div>
+            <div class="attribute"><span>火</span><small>燃烧 / 爆发</small></div>
+            <div class="attribute"><span>雷</span><small>贯穿 / 毁灭</small></div>
+            <div class="attribute"><span>冰</span><small>冻结 / 迟滞</small></div>
+            <div class="attribute"><span>土</span><small>防御 / 重塑</small></div>
+            <div class="attribute"><span>水</span><small>流动 / 侵蚀</small></div>
+            <div class="attribute"><span>光明</span><small>净化 / 安抚</small></div>
+            <div class="attribute"><span>黑暗</span><small>腐蚀 / 混乱</small></div>
+            <div class="attribute"><span>空间</span><small>折越 / 封锁</small></div>
+            <div class="attribute"><span>时间</span><small>迟滞 / 加速</small></div>
+            <div class="attribute"><span>精神</span><small>感知 / 操控</small></div>
+            <div class="attribute"><span>生命</span><small>修复 / 生长</small></div>
+          </div>
+
+          <div class="ring-config reveal">
+            <div class="ring-config-copy">
+              <p class="card-kicker">OPTIMAL RING SET</p>
+              <h4>最佳魂环配置</h4>
+            </div>
+            <div class="ring-config-main">
+              <div class="ring-config-dots" aria-hidden="true">
+                <i class="dot yellow"></i><i class="dot yellow"></i>
+                <i class="dot purple"></i><i class="dot purple"></i>
+                <i class="dot black"></i><i class="dot black"></i><i class="dot black"></i><i class="dot black"></i><i class="dot black"></i>
+              </div>
+              <p>黄 · 黄 · 紫 · 紫 · 黑 · 黑 · 黑 · 黑 · 黑</p>
+            </div>
+            <small>以先天魂力九级、未融合魂核的魂师为标准。魂环不是越高越好，能承受，才是力量。</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-chronicle" id="chronicle">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span>03</span> / CHRONICLE</p>
+          <h2>一万年，不过是从一座神座<br><em>走向另一座神座。</em></h2>
+          <p class="section-lead">龙族的黄昏、人类的黎明、天使的盛世与神的黄昏。四个时代，共用同一条登神阶。</p>
+        </header>
+
+        <div class="era-tabs reveal" role="tablist" aria-label="选择历史纪元">
+          <button type="button" class="era-tab" role="tab" aria-selected="false" data-era="dragon"><span>01</span>龙族时代</button>
+          <button type="button" class="era-tab" role="tab" aria-selected="false" data-era="fall"><span>02</span>龙陨纪元</button>
+          <button type="button" class="era-tab is-active" role="tab" aria-selected="true" data-era="angel"><span>03</span>天使纪元</button>
+          <button type="button" class="era-tab" role="tab" aria-selected="false" data-era="blessed"><span>04</span>神佑纪元</button>
+        </div>
+
+        <div class="era-panel reveal" id="eraPanel">
+          <aside class="era-aside">
+            <p class="card-kicker" id="eraKicker">THE AGE OF ANGELS</p>
+            <p class="era-range" id="eraRange">天使纪 1 — 10000</p>
+            <h3 id="eraTitle">天使纪元</h3>
+            <p id="eraSummary">武魂殿以信仰统御大陆，两大帝国在神权下崛起。万年的秩序，最终在一场母女对决中崩塌。</p>
+            <div class="era-progress" aria-hidden="true"><span id="eraProgress"></span></div>
+          </aside>
+          <div class="era-events" id="eraEvents"></div>
+        </div>
+
+        <div class="era-footer reveal">
+          <p>历史不是一条直线。它是一层层堆叠的尸骨、谎言与牺牲。</p>
+          <span>SCROLL THROUGH THE AGES</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-factions" id="factions">
+      <div class="container">
+        <header class="section-head section-head-split reveal">
+          <div>
+            <p class="eyebrow"><span>04</span> / FACTIONS</p>
+            <h2>神权、皇权与荒野，<br><em>三分天下。</em></h2>
+          </div>
+          <p class="section-lead">一块母大陆，五种秩序。它们彼此依存，也彼此提防；在万年的棋盘上，没有永远的盟友。</p>
+        </header>
+
+        <div class="faction-shell">
+          <div class="map-wrap reveal">
+            <div class="map-head">
+              <span>母大陆 · 东部文明区</span>
+              <small>点击光点 · 示意图 · 非精确比例</small>
+            </div>
+            <svg class="world-map" id="worldMap" viewBox="0 0 1000 700" role="img" aria-label="母大陆东部势力示意图">
+              <defs>
+                <linearGradient id="landGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#141b22"/>
+                  <stop offset="55%" stop-color="#0e141b"/>
+                  <stop offset="100%" stop-color="#0a0e13"/>
+                </linearGradient>
+                <linearGradient id="riverGrad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#6f8fa6" stop-opacity=".15"/>
+                  <stop offset="50%" stop-color="#8aa8bb" stop-opacity=".55"/>
+                  <stop offset="100%" stop-color="#6f8fa6" stop-opacity=".12"/>
+                </linearGradient>
+                <filter id="mapGlow" x="-100%" y="-100%" width="300%" height="300%">
+                  <feGaussianBlur stdDeviation="8"/>
+                </filter>
+                <pattern id="mapGrid" width="50" height="50" patternUnits="userSpaceOnUse">
+                  <path d="M50 0H0v50" fill="none" stroke="#c8a86b" stroke-opacity=".035" stroke-width=".7"/>
+                </pattern>
+                <radialGradient id="holyGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#e7d3a7" stop-opacity=".14"/>
+                  <stop offset="100%" stop-color="#e7d3a7" stop-opacity="0"/>
+                </radialGradient>
+                <radialGradient id="bloodGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#9d3b3f" stop-opacity=".16"/>
+                  <stop offset="100%" stop-color="#9d3b3f" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+
+              <rect width="1000" height="700" fill="#080b10"/>
+              <rect width="1000" height="700" fill="url(#mapGrid)"/>
+
+              <g class="map-contours" fill="none" stroke="#c8a86b" stroke-opacity=".06">
+                <path d="M60 620c100-120 240-180 360-160s220 100 320 40"/>
+                <path d="M40 560c100-110 230-160 340-140s230 90 330 30"/>
+                <path d="M80 670c110-110 230-150 330-130s210 80 310 20"/>
+                <path d="M620 100c70 40 120 100 120 170s-60 120-120 150"/>
+                <path d="M680 80c80 50 140 120 140 200s-70 140-140 170"/>
+              </g>
+
+              <circle cx="346" cy="370" r="150" fill="url(#holyGlow)"/>
+              <circle cx="300" cy="560" r="140" fill="url(#bloodGlow)"/>
+              <g class="map-regions">
+                <ellipse cx="690" cy="170" rx="190" ry="110" fill="#6f8fa6" opacity=".025"/>
+                <ellipse cx="690" cy="400" rx="190" ry="125" fill="#c8a86b" opacity=".018"/>
+                <ellipse cx="340" cy="390" rx="135" ry="105" fill="#e7d3a7" opacity=".022"/>
+                <ellipse cx="300" cy="560" rx="150" ry="105" fill="#9d3b3f" opacity=".022"/>
+              </g>
+              <path class="map-land" d="M120 120 300 68 520 46 760 72 900 150 944 300 900 470 820 590 660 660 470 650 300 600 190 520 120 390Z" fill="url(#landGrad)" stroke="#c8a86b" stroke-opacity=".2" stroke-width="1.2"/>
+              <path class="map-land-inner" d="M160 150 320 104 520 86 730 108 860 176 894 300 852 450 780 550 640 616 480 608 330 564 220 490 160 380Z" fill="none" stroke="#c8a86b" stroke-opacity=".055"/>
+
+              <g class="map-sea-lines" fill="none" stroke="#6f8fa6" stroke-opacity=".09">
+                <path d="M900 200c20 16 20 38 0 54s-20 38 0 54 20 38 0 54"/>
+                <path d="M930 180c26 22 26 50 0 72s-26 50 0 72 26 50 0 72"/>
+                <path d="M820 620c40 10 70 30 90 60M780 650c30 6 54 20 72 42"/>
+              </g>
+
+              <g class="map-rivers" fill="none" stroke="url(#riverGrad)" stroke-width="4" stroke-linecap="round">
+                <path d="M330 610c80-20 120-4 180 24s140 44 240 18 120-36 160-20"/>
+                <path d="M570 470c40 36 50 72 40 112"/>
+                <path d="M300 360c80-10 140 12 210 44s150 38 230 18"/>
+              </g>
+
+              <g class="map-mountains" fill="none" stroke="#c8a86b" stroke-opacity=".16" stroke-width="1">
+                <path d="M220 300 260 240 300 300M270 330 310 270 350 330M320 360 360 300 400 360M180 360 220 300 260 360M370 400 410 340 450 400"/>
+                <path d="M600 160 640 110 680 160M660 190 700 140 740 190M720 220 760 170 800 220"/>
+                <path d="M520 540 560 490 600 540M580 570 620 520 660 570"/>
+              </g>
+
+              <g class="map-walls" fill="none" stroke="#c8a86b" stroke-opacity=".32" stroke-dasharray="4 6">
+                <path d="M360 470c30 22 58 50 86 88"/>
+                <path d="M880 250v110"/>
+              </g>
+
+              <g class="map-region-labels">
+                <text x="680" y="128" class="map-label map-label-big">北境林海</text>
+                <text x="658" y="152" class="map-label-sub">玄霜帝国 · 白虎城</text>
+                <text x="694" y="252" class="map-label map-label-big">晏北平原</text>
+                <text x="684" y="276" class="map-label-sub">晏北五城</text>
+                <text x="716" y="414" class="map-label map-label-big">大平原</text>
+                <text x="698" y="438" class="map-label-sub">金鹄帝国 · 七大宗门</text>
+                <text x="360" y="402" class="map-label map-label-big">圣光盆地</text>
+                <text x="360" y="426" class="map-label-sub">武魂殿 · 武魂城</text>
+                <text x="220" y="518" class="map-label map-label-big">龙墟高原</text>
+                <text x="220" y="542" class="map-label-sub">修罗传承 · 杀戮之都</text>
+                <text x="548" y="486" class="map-label">星斗大森林</text>
+                <text x="538" y="506" class="map-label-sub">魂兽王庭</text>
+                <text x="446" y="624" class="map-label">冰火两仪眼</text>
+                <text x="438" y="644" class="map-label-sub">龙瘴森林</text>
+                <text x="748" y="600" class="map-label">红江</text>
+                <text x="776" y="624" class="map-label-sub">日升洋</text>
+                <text x="160" y="220" class="map-label">极北冰原</text>
+                <text x="158" y="244" class="map-label-sub">人类禁区</text>
+              </g>
+
+              <g class="map-geo-labels">
+                <text x="922" y="382" class="map-sea-label" transform="rotate(90 922 382)">日升洋</text>
+                <text x="252" y="308" class="map-geo-label" transform="rotate(28 252 308)">日落山脉</text>
+                <text x="386" y="494" class="map-geo-label" transform="rotate(55 386 494)">圣缘长城</text>
+                <text x="510" y="368" class="map-geo-label">晏河</text>
+                <text x="606" y="566" class="map-geo-label" transform="rotate(62 606 566)">龙江</text>
+              </g>
+
+              <g class="map-cities">
+                <g class="map-city"><circle cx="346" cy="370" r="4"/></g>
+                <g class="map-city"><circle cx="744" cy="396" r="3.2"/></g>
+                <g class="map-city"><circle cx="676" cy="118" r="3.2"/></g>
+                <g class="map-city"><circle cx="638" cy="512" r="3"/><text x="648" y="508">蓝霸城</text></g>
+                <g class="map-city"><circle cx="802" cy="418" r="2.8"/><text x="812" y="414">七宝城</text></g>
+                <g class="map-city"><circle cx="602" cy="304" r="2.8"/><text x="612" y="300">昊天堡</text></g>
+              </g>
+
+              <g class="map-pin-group" id="mapPins">
+                <g class="map-pin is-active" data-faction="wuhun" tabindex="0" role="button" aria-label="查看武魂殿">
+                  <circle class="pin-halo" cx="346" cy="370" r="20"/>
+                  <circle class="pin-dot" cx="346" cy="370" r="5"/>
+                </g>
+                <g class="map-pin" data-faction="jingu" tabindex="0" role="button" aria-label="查看金鹄帝国">
+                  <circle class="pin-halo" cx="744" cy="396" r="18"/>
+                  <circle class="pin-dot" cx="744" cy="396" r="4.5"/>
+                </g>
+                <g class="map-pin" data-faction="xuangshuang" tabindex="0" role="button" aria-label="查看玄霜帝国">
+                  <circle class="pin-halo" cx="676" cy="118" r="18"/>
+                  <circle class="pin-dot" cx="676" cy="118" r="4.5"/>
+                </g>
+                <g class="map-pin" data-faction="shalu" tabindex="0" role="button" aria-label="查看杀戮之都">
+                  <circle class="pin-halo" cx="300" cy="560" r="18"/>
+                  <circle class="pin-dot" cx="300" cy="560" r="4.5"/>
+                </g>
+              </g>
+
+              <g class="map-compass" transform="translate(900 90)">
+                <circle r="28" fill="none" stroke="#c8a86b" stroke-opacity=".2"/>
+                <path d="M0-22 6 0 0 22-6 0Z" fill="#c8a86b" fill-opacity=".35"/>
+                <text y="-34" text-anchor="middle">N</text>
+              </g>
+
+              <g class="map-divine" transform="translate(500 24)">
+                <circle r="14" fill="none" stroke="#e7d3a7" stroke-opacity=".35"/>
+                <circle r="5" fill="#e7d3a7" fill-opacity=".75" filter="url(#mapGlow)"/>
+                <text x="24" y="5">神界 · 大监护者</text>
+              </g>
+            </svg>
+            <div class="map-legend">
+              <span><i class="legend-line"></i>河流</span>
+              <span><i class="legend-dash"></i>长城 / 边界</span>
+              <span><i class="legend-dot"></i>核心城市</span>
+            </div>
+          </div>
+
+          <aside class="faction-detail reveal" id="factionDetail" aria-live="polite">
+            <p class="card-kicker" id="factionKicker">SPIRIT HALL · 神权中枢</p>
+            <h3 id="factionName">武魂殿</h3>
+            <p class="faction-en" id="factionEn">SPIRIT HALL</p>
+            <p class="faction-desc" id="factionDesc">以天使信仰为根基的魂师组织。教皇殿对外，长老殿议政，供奉殿监察；天使军团是神权的矛，圣光盆地是神权的盾。</p>
+            <dl class="faction-stats" id="factionStats"></dl>
+            <p class="faction-quote" id="factionQuote">“神的意志，由人来执行。”</p>
+            <div class="faction-tabs" id="factionTabs" role="tablist" aria-label="选择势力">
+              <button type="button" class="faction-tab is-active" data-faction="wuhun" role="tab" aria-selected="true">武魂殿</button>
+              <button type="button" class="faction-tab" data-faction="jingu" role="tab" aria-selected="false">金鹄</button>
+              <button type="button" class="faction-tab" data-faction="xuangshuang" role="tab" aria-selected="false">玄霜</button>
+              <button type="button" class="faction-tab" data-faction="shalu" role="tab" aria-selected="false">杀戮之都</button>
+              <button type="button" class="faction-tab" data-faction="shenjie" role="tab" aria-selected="false">神界</button>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-truth" id="truth">
+      <div class="container">
+        <header class="section-head section-head-light reveal">
+          <p class="eyebrow"><span>05</span> / THE TRUTH</p>
+          <h2>天使的翅膀之下，<br><em>藏着另一部历史。</em></h2>
+          <p class="section-lead">天使纪元的历史，由胜利者书写。直到一位大天使在生命的尽头，亲手翻开了另一页。</p>
+        </header>
+
+        <div class="truth-grid">
+          <article class="truth-card gospel reveal">
+            <div class="truth-card-head">
+              <p class="card-kicker">THE GOSPEL</p>
+              <span class="truth-mark">明</span>
+            </div>
+            <h3>圣典所记载的</h3>
+            <ul>
+              <li>天使神是唯一的人类神祇。</li>
+              <li>武魂殿代行神的意志，教皇是神在人间的代言人。</li>
+              <li>天使神考是神对忠信者的恩赐。</li>
+              <li>95级是凡人不可逾越的极限。</li>
+              <li>修罗神是异端传说中的虚构神祇。</li>
+            </ul>
+          </article>
+
+          <article class="truth-card apocrypha reveal" id="apocrypha">
+            <div class="truth-card-head">
+              <p class="card-kicker">THE APOCRYPHA</p>
+              <span class="truth-mark">影</span>
+            </div>
+            <h3>被涂抹的真相</h3>
+            <div class="secret-body" id="secretBody">
+              <ul>
+                <li>千羽寒与洪烈在同一年代成神；修罗神真实存在。</li>
+                <li>95级枷锁由大监护者设下，只为筛选它认可的人。</li>
+                <li>天使神考是一场交易：以血脉弱化，换取每一代半神。</li>
+                <li>雨家是千羽寒长子雨清寒的后裔，携带修罗神血脉。</li>
+                <li>天使信仰的荣光，建立在隐瞒、牺牲与万年的沉默之上。</li>
+              </ul>
+            </div>
+            <button type="button" class="reveal-btn" id="revealTruth" aria-expanded="false" aria-controls="secretBody">
+              <span class="reveal-seal"><svg><use href="#i-seal"></use></svg></span>
+              <span class="reveal-text">揭开神谕</span>
+            </button>
+            <p class="truth-note" id="truthNote">触碰封印，阅读被天使一族抹去的那一页。</p>
+          </article>
+        </div>
+
+        <div class="god-grid reveal">
+          <article class="god-card">
+            <span class="god-symbol">✧</span>
+            <p class="card-kicker">ANGEL</p>
+            <h3>天使神</h3>
+            <p>千羽寒 → 千仞雪</p>
+            <small>光明 · 净化 · 守护</small>
+          </article>
+          <article class="god-card">
+            <span class="god-symbol">☾</span>
+            <p class="card-kicker">ASURA</p>
+            <h3>修罗神</h3>
+            <p>洪烈 → 雨启智</p>
+            <small>杀戮 · 黑暗 · 试炼</small>
+          </article>
+          <article class="god-card">
+            <span class="god-symbol">✶</span>
+            <p class="card-kicker">DEATH</p>
+            <h3>死神</h3>
+            <p>路汐芙</p>
+            <small>吞噬 · 死亡 · 反抗</small>
+          </article>
+          <article class="god-card">
+            <span class="god-symbol">❧</span>
+            <p class="card-kicker">ILO</p>
+            <h3>伊洛神</h3>
+            <p>蓝昊川</p>
+            <small>生命 · 治愈 · 生长</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-characters" id="characters">
+      <div class="container">
+        <header class="section-head section-head-split reveal">
+          <div>
+            <p class="eyebrow"><span>06</span> / PORTRAITS</p>
+            <h2>在神座之前，<br><em>他们先是人。</em></h2>
+          </div>
+          <p class="section-lead">有人守护秩序，有人撕裂秩序，有人只想守住一个人。点击档案，阅读他们的选择与代价。</p>
+        </header>
+
+        <div class="character-toolbar reveal">
+          <div class="filter-chips" id="characterFilters" role="tablist" aria-label="筛选人物">
+            <button type="button" class="chip is-active" data-filter="all" role="tab" aria-selected="true">全部</button>
+            <button type="button" class="chip" data-filter="angel" role="tab" aria-selected="false">天使一脉</button>
+            <button type="button" class="chip" data-filter="rain" role="tab" aria-selected="false">雨家</button>
+            <button type="button" class="chip" data-filter="haotian" role="tab" aria-selected="false">昊天宗</button>
+            <button type="button" class="chip" data-filter="wuhun" role="tab" aria-selected="false">武魂殿</button>
+          </div>
+          <span class="character-count" id="characterCount">08 份档案</span>
+        </div>
+
+        <div class="character-grid" id="characterGrid"></div>
+        <noscript><p class="noscript-note">请启用 JavaScript 以查看人物档案。</p></noscript>
+      </div>
+    </section>
+
+    <section class="section section-story" id="story">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span>07</span> / THE STORY</p>
+          <h2>《登神阶：魔裔天使》</h2>
+          <p class="section-lead">天使纪元九千八百一十三年。一场青年魂师的竞技盛典，撕开了万年神权秩序的第一道裂缝。</p>
+        </header>
+
+        <div class="story-intro reveal">
+          <p class="story-drop">当繁花隆学院的少年们站上寰陆新锐武魂竞技盛典的决赛场，没有人知道，他们将要面对的不只是武魂殿学院的黄金一代，还有一个横跨万年的谎言。</p>
+          <p>天使神的荣光、修罗神的传说、雨家被隐藏的血脉、创世天神的枷锁——所有线头，最终都收束在武魂城下的那场四神会战。而在那之前，他们必须先经历学院、竞技、战争、背叛与失去。</p>
+        </div>
+
+        <div class="act-grid">
+          <article class="act-card reveal">
+            <span class="act-num">I</span>
+            <p class="card-kicker">ACT ONE</p>
+            <h3>神座之下</h3>
+            <p>学院、竞技、友情与爱情。少年们以为自己在争夺冠军，实际上是在撞向一整套旧秩序。</p>
+            <span class="act-tag">繁花隆学院 · 寰陆盛典</span>
+          </article>
+          <article class="act-card reveal">
+            <span class="act-num">II</span>
+            <p class="card-kicker">ACT TWO</p>
+            <h3>血色加冕</h3>
+            <p>金鹄城事变、大圣灵崛起、第二次南北战争。仇恨被点燃，牺牲被合理化，神权与皇权同时露出獠牙。</p>
+            <span class="act-tag">金鹄城 · 四神会战</span>
+          </article>
+          <article class="act-card reveal">
+            <span class="act-num">III</span>
+            <p class="card-kicker">ACT THREE</p>
+            <h3>双神一体</h3>
+            <p>万年后，两兄弟的血脉在一个拥抱里重新汇合。天使与修罗短暂共存，旧神陨落，新神加冕。</p>
+            <span class="act-tag">武魂城 · 神佑纪元</span>
+          </article>
+        </div>
+
+        <div class="lineage reveal">
+          <div class="lineage-head">
+            <p class="eyebrow">BLOODLINE &amp; DIVINITY</p>
+            <h3>一条被分开万年的血脉</h3>
+            <p>千羽寒与雨赤瞳的结合，让天使与修罗两种血脉在万年前分道扬镳。长子雨清寒隐入荒野，次子千启明登上神座；直到雨启智与千仞雪重逢，两条血脉才再次交汇。</p>
+          </div>
+          <div class="lineage-diagram">
+            <div class="lineage-origin">
+              <span class="lineage-node node-angel">千羽寒</span>
+              <i>×</i>
+              <span class="lineage-node node-asura">雨赤瞳</span>
+            </div>
+            <div class="lineage-branches">
+              <div class="lineage-branch">
+                <span class="branch-dot"></span>
+                <div>
+                  <h4>长子 · 雨清寒</h4>
+                  <p>雨家一脉 · 修罗神血脉</p>
+                </div>
+              </div>
+              <div class="lineage-branch">
+                <span class="branch-dot"></span>
+                <div>
+                  <h4>次子 · 千启明</h4>
+                  <p>千家一脉 · 天使神血脉</p>
+                </div>
+              </div>
+            </div>
+            <div class="lineage-converge">
+              <span>万年后</span>
+              <div class="converge-nodes">
+                <b>雨启智</b><i>×</i><b>千仞雪</b>
+              </div>
+              <strong>双神一体</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-quote reveal">
+          <p>“万年前，两兄弟的血脉被分开。<br>万年后，它们在一个拥抱里重新汇合。”</p>
+          <span>THE BLOOD REMEMBERS</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="epilogue" id="epilogue">
+      <div class="epilogue-bg" aria-hidden="true">
+        <span>10000</span>
+      </div>
+      <div class="container">
+        <div class="epilogue-inner reveal">
+          <p class="eyebrow">EPILOGUE / THE BLESSED ERA</p>
+          <h2>神佑纪元</h2>
+          <blockquote>
+            “只有创世天神是唯一且至高的神。<br>
+            从万年前的千羽寒与洪烈，到今天的千仞雪、雨启智和蓝昊川，<br>
+            都不过是被祂选中的众多凡人之一。”
+          </blockquote>
+          <p class="epilogue-copy">天使纪元结束后的第一万年，三位新神同时飞升。母大陆第一次同时感受到三种神力的波动——天使的光、修罗的血、伊洛的生长。</p>
+          <p class="epilogue-copy">人类终于明白：神不是唯一的答案。神是无数凡人走过的路。</p>
+          <a class="btn btn-gold" href="#home">回到阶前 <svg><use href="#i-arrow"></use></svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M16 2 28 9v14L16 30 4 23V9L16 2Z" fill="none" stroke="currentColor" stroke-width="1"/><path d="M16 8 22 12v8l-6 4-6-4v-8l6-4Z" fill="none" stroke="currentColor" stroke-width="1"/><path d="M16 13v6M13 16h6" stroke="currentColor" stroke-width="1"/></svg>
+        </span>
+        <div>
+          <strong>登神阶</strong>
+          <small>THE STAIRWAY TO APOTHEOSIS</small>
+        </div>
+      </div>
+      <p class="footer-note">据《登神阶》世界观设定、人物设定与时间线整理。<br>含《魔裔天使》终章剧透 · 人物判词为编辑整理，非原文台词。</p>
+      <div class="footer-meta">
+        <p>LIGHT · SHADOW · STARDUST<br><span>DESIGNED AS AN ARCHIVE</span></p>
+        <button type="button" class="footer-share" id="sharePage">复制本页链接</button>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="characterModal" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalName">
+      <button type="button" class="modal-close" id="modalClose" aria-label="关闭人物档案"><svg><use href="#i-close"></use></svg></button>
+      <div class="modal-visual" id="modalVisual">
+        <span class="modal-watermark" id="modalWatermark">千</span>
+        <div class="modal-visual-meta">
+          <span id="modalFaction">天使一族</span>
+          <span id="modalNo">ARCHIVE 01</span>
+        </div>
+      </div>
+      <div class="modal-content">
+        <p class="card-kicker" id="modalRole">大天使 · 前教皇</p>
+        <h2 id="modalName">千道流</h2>
+        <p class="modal-en" id="modalEn">QIAN DAOLIU</p>
+        <div class="modal-stats" id="modalStats"></div>
+        <p class="modal-quote" id="modalQuote"></p>
+        <div class="modal-bio" id="modalBio"></div>
+        <div class="modal-fate">
+          <span>命运</span>
+          <p id="modalFate"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
