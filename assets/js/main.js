@@ -458,6 +458,12 @@
     }
   };
 
+  if (window.DENG_SHEN_TIMELINE) {
+    const expanded = window.DENG_SHEN_TIMELINE;
+    if (expanded.fall && Array.isArray(expanded.fall.events)) eraData.fall.events = expanded.fall.events;
+    if (expanded.angel && Array.isArray(expanded.angel.events)) eraData.angel.events = expanded.angel.events;
+  }
+
   const eraPanel = $('#eraPanel');
   const eraKicker = $('#eraKicker');
   const eraRange = $('#eraRange');
@@ -470,17 +476,40 @@
     const data = eraData[key];
     if (!data || !eraPanel) return;
     if (eraKicker) eraKicker.textContent = data.kicker;
-    if (eraRange) eraRange.textContent = data.range;
+    if (eraRange) eraRange.textContent = `${data.range} · ${data.events.length} 个事件`;
     if (eraTitle) eraTitle.textContent = data.title;
     if (eraSummary) eraSummary.textContent = data.summary;
     if (eraProgress) eraProgress.style.width = data.progress;
     if (eraEvents) {
-      eraEvents.innerHTML = data.events.map((event, index) => `
-        <article class="era-event" style="animation-delay:${index * 45}ms">
-          <div class="era-event-year">${event.year}</div>
-          <div><h4>${event.title}</h4><p>${event.desc}</p></div>
-        </article>
-      `).join('');
+      eraEvents.innerHTML = `
+        <p class="era-event-hint">点击任意事件，查看详细经过与历史影响。</p>
+        ${data.events.map((event, index) => `
+          <details class="era-event" style="animation-delay:${Math.min(index * 35, 420)}ms">
+            <summary>
+              <span class="era-event-year">${event.year}</span>
+              <span class="era-event-main">
+                <strong>${event.title}</strong>
+                <small>${event.desc}</small>
+              </span>
+              <span class="era-event-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="era-event-detail">
+              <p>${event.detail}</p>
+              ${event.impact ? `<p class="era-event-impact"><span>历史影响</span>${event.impact}</p>` : ''}
+            </div>
+          </details>
+        `).join('')}
+      `;
+
+      const eventNodes = $$('details.era-event', eraEvents);
+      eventNodes.forEach(node => {
+        node.addEventListener('toggle', () => {
+          if (!node.open) return;
+          eventNodes.forEach(other => {
+            if (other !== node) other.open = false;
+          });
+        });
+      });
     }
     $$('.era-tab').forEach(tab => {
       const active = tab.dataset.era === key;
