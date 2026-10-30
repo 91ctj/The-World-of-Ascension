@@ -1786,7 +1786,50 @@ strong, b { font-weight: 600; }
   margin-bottom: 28px;
   flex-wrap: wrap;
 }
+.character-tools {
+  display: flex;
+  align-items: center;
+  flex: 1 1 560px;
+  gap: 14px;
+  flex-wrap: wrap;
+}
 .filter-chips { display: flex; flex-wrap: wrap; gap: 7px; }
+.character-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 0 1 230px;
+  min-width: 190px;
+}
+.character-search svg {
+  position: absolute;
+  left: 11px;
+  width: 14px;
+  height: 14px;
+  color: var(--ink-faint);
+  pointer-events: none;
+}
+.character-search input {
+  width: 100%;
+  height: 34px;
+  padding: 0 12px 0 32px;
+  border: 1px solid rgba(200,168,107,.16);
+  border-radius: 0;
+  outline: none;
+  background: rgba(255,255,255,.015);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: .05em;
+  transition: border-color .25s, background .25s;
+  -webkit-appearance: none;
+}
+.character-search input::placeholder { color: var(--ink-faint); }
+.character-search input:focus {
+  border-color: var(--line-strong);
+  background: rgba(200,168,107,.04);
+}
+.character-search input::-webkit-search-cancel-button { filter: invert(.7); }
 .chip {
   padding: 7px 13px;
   border: 1px solid rgba(200,168,107,.15);
@@ -1813,6 +1856,16 @@ strong, b { font-weight: 600; }
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
+}
+.character-empty {
+  grid-column: 1 / -1;
+  padding: 64px 24px;
+  border: 1px solid var(--line);
+  color: var(--ink-faint);
+  font-family: var(--serif);
+  font-size: 14px;
+  letter-spacing: .04em;
+  text-align: center;
 }
 .character-card {
   position: relative;
@@ -2748,6 +2801,9 @@ strong, b { font-weight: 600; }
   .char-line { display: none; }
   .char-tags { margin-top: 12px; }
   .character-toolbar { align-items: flex-start; }
+  .character-tools { flex-basis: 100%; width: 100%; gap: 10px; }
+  .character-search { flex: 1 1 100%; }
+  .character-search input { height: 40px; font-size: 11px; }
   .character-count { display: none; }
 
   .modal { padding: 10px; }
