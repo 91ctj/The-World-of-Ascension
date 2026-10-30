@@ -18,7 +18,7 @@ python -m http.server 4173
 
 GitHub Pages 永久地址：
 
-https://91ctj.github.io/dengshenjie/
+https://91ctj.github.io/The-World-of-Ascension/
 
 网站为纯静态页面，不依赖本机运行；更新 GitHub 仓库后会自动重新发布。
 
