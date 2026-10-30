@@ -687,7 +687,7 @@
       name: '雨启智',
       en: 'YU QIZHI',
       faction: '雨家',
-      tags: ['rain'],
+      tags: ['rain', 'shalu'],
       role: '二代修罗神 · 杀戮之王',
       cardLine: '被仇恨塑形，又被爱重新拼合。',
       watermark: '雨',
@@ -725,7 +725,7 @@
       name: '雨启思',
       en: 'YU QISI',
       faction: '雨家',
-      tags: ['rain'],
+      tags: ['rain', 'shalu'],
       role: '暗魔邪神虎 · 杀戮之都镇守魂兽',
       cardLine: '她把自己活成了一把刀，刀锋始终朝向家人。',
       watermark: '思',
@@ -779,32 +779,55 @@
     }
   ];
 
+  if (Array.isArray(window.DENG_SHEN_CHARACTERS_EXTRA)) {
+    characters.push(...window.DENG_SHEN_CHARACTERS_EXTRA);
+  }
+
   const grid = $('#characterGrid');
   const filterWrap = $('#characterFilters');
   const characterCount = $('#characterCount');
+  const characterSearch = $('#characterSearch');
   let activeFilter = 'all';
+  let searchQuery = '';
+
+  const characterSearchText = character => [
+    character.name,
+    character.en,
+    character.role,
+    character.faction,
+    character.cardLine,
+    ...character.stats.flat()
+  ].join(' ').toLowerCase();
 
   const renderCharacters = filter => {
     if (!grid) return;
-    const visible = characters.filter(character => filter === 'all' || character.tags.includes(filter));
-    grid.innerHTML = visible.map((character, index) => `
-      <article class="character-card" role="button" tabindex="0" data-id="${character.id}"
-        style="--accent:${character.accent};--accent-soft:${character.accentSoft}">
-        <div class="char-top">
-          <span>ARCHIVE ${String(characters.indexOf(character) + 1).padStart(2, '0')}</span>
-          <span class="char-faction">${character.faction}</span>
-        </div>
-        <span class="char-watermark" aria-hidden="true">${character.watermark}</span>
-        <div class="char-bottom">
-          <p class="char-role">${character.role}</p>
-          <h3>${character.name}</h3>
-          <p class="char-en">${character.en}</p>
-          <div class="char-line"><p>${character.cardLine}</p></div>
-          <div class="char-tags">${character.stats.slice(0, 2).map(([, value]) => `<span>${value}</span>`).join('')}</div>
-          <span class="char-open">阅读档案 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M9 5h10v10" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        </div>
-      </article>
-    `).join('');
+    const query = searchQuery.trim().toLowerCase();
+    const visible = characters.filter(character => {
+      const matchesFilter = filter === 'all' || character.tags.includes(filter);
+      const matchesSearch = !query || characterSearchText(character).includes(query);
+      return matchesFilter && matchesSearch;
+    });
+
+    grid.innerHTML = visible.length
+      ? visible.map(character => `
+        <article class="character-card" role="button" tabindex="0" data-id="${character.id}"
+          style="--accent:${character.accent};--accent-soft:${character.accentSoft}">
+          <div class="char-top">
+            <span>ARCHIVE ${String(characters.indexOf(character) + 1).padStart(2, '0')}</span>
+            <span class="char-faction">${character.faction}</span>
+          </div>
+          <span class="char-watermark" aria-hidden="true">${character.watermark}</span>
+          <div class="char-bottom">
+            <p class="char-role">${character.role}</p>
+            <h3>${character.name}</h3>
+            <p class="char-en">${character.en}</p>
+            <div class="char-line"><p>${character.cardLine}</p></div>
+            <div class="char-tags">${character.stats.slice(0, 2).map(([, value]) => `<span>${value}</span>`).join('')}</div>
+            <span class="char-open">阅读档案 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M9 5h10v10" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </div>
+        </article>
+      `).join('')
+      : '<p class="character-empty">没有找到匹配的人物。试试其他姓名、武魂或阵营。</p>';
 
     $$('.character-card', grid).forEach(card => {
       const open = () => openCharacter(card.dataset.id);
@@ -818,7 +841,10 @@
     });
 
     if (characterCount) {
-      characterCount.textContent = `${String(visible.length).padStart(2, '0')} 份档案`;
+      const filtered = filter !== 'all' || query;
+      characterCount.textContent = filtered
+        ? `${String(visible.length).padStart(2, '0')} / ${characters.length} 份档案`
+        : `${characters.length} 份档案`;
     }
   };
 
@@ -832,6 +858,11 @@
       });
       renderCharacters(activeFilter);
     });
+  });
+
+  characterSearch?.addEventListener('input', event => {
+    searchQuery = event.target.value;
+    renderCharacters(activeFilter);
   });
 
   if (grid) renderCharacters('all');
